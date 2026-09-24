@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DBAI v1.0 · Dashboard</title>
+<style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.18 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.inset-y-0{top:0;bottom:0}.-right-10{right:-2.5rem}.-top-10{top:-2.5rem}.-top-32{top:-8rem}.bottom-0{bottom:0}.bottom-2{bottom:.5rem}.left-0{left:0}.left-1\/2{left:50%}.left-2{left:.5rem}.left-\[58\%\]{left:58%}.right-0{right:0}.right-3{right:.75rem}.top-0{top:0}.top-1\/2{top:50%}.top-2{top:.5rem}.top-3{top:.75rem}.top-\[40\%\]{top:40%}.top-\[52\%\]{top:52%}.top-\[70\%\]{top:70%}.col-span-12{grid-column:span 12/span 12}.mx-auto{margin-left:auto;margin-right:auto}.mb-1\.5{margin-bottom:.375rem}.mb-2\.5{margin-bottom:.625rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.ml-auto{margin-left:auto}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-auto{margin-top:auto}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1{height:.25rem}.h-1\.5{height:.375rem}.h-2{height:.5rem}.h-24{height:6rem}.h-3{height:.75rem}.h-\[120px\]{height:120px}.h-\[20px\]{height:20px}.h-\[320px\]{height:320px}.h-\[4px\]{height:4px}.h-\[5px\]{height:5px}.h-\[6px\]{height:6px}.h-\[84px\]{height:84px}.h-full{height:100%}.h-px{height:1px}.min-h-screen{min-height:100vh}.w-1{width:.25rem}.w-1\.5{width:.375rem}.w-2{width:.5rem}.w-24{width:6rem}.w-4{width:1rem}.w-6{width:1.5rem}.w-\[200px\]{width:200px}.w-\[20px\]{width:20px}.w-\[4px\]{width:4px}.w-\[5px\]{width:5px}.w-\[6px\]{width:6px}.w-\[72\%\]{width:72%}.w-\[800px\]{width:800px}.w-full{width:100%}.w-px{width:1px}.min-w-\[36px\]{min-width:36px}.max-w-\[1280px\]{max-width:1280px}.max-w-\[130px\]{max-width:130px}.flex-1{flex:1 1 0%}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-start{justify-content:flex-start}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-x-6{-moz-column-gap:1.5rem;column-gap:1.5rem}.gap-y-1{row-gap:.25rem}.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.625rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-\[18px\]>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(18px*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(18px*var(--tw-space-y-reverse))}.self-center{align-self:center}.overflow-hidden,.truncate{overflow:hidden}.truncate{text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:.25rem}.rounded-\[10px\]{border-radius:10px}.rounded-\[12px\]{border-radius:12px}.rounded-\[14px\]{border-radius:14px}.rounded-\[20px\]{border-radius:20px}.rounded-\[6px\]{border-radius:6px}.rounded-full{border-radius:9999px}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-emerald-500\/20{border-color:rgba(16,185,129,.2)}.border-orange-500\/20{border-color:rgba(249,115,22,.2)}.border-orange-500\/30{border-color:rgba(249,115,22,.3)}.border-white\/\[0\.05\]{border-color:hsla(0,0%,100%,.05)}.border-white\/\[0\.06\]{border-color:hsla(0,0%,100%,.06)}.border-white\/\[0\.07\]{border-color:hsla(0,0%,100%,.07)}.border-white\/\[0\.08\]{border-color:hsla(0,0%,100%,.08)}.border-yellow-500\/20{border-color:rgba(234,179,8,.2)}.bg-\[\#080808\]{--tw-bg-opacity:1;background-color:rgb(8 8 8/var(--tw-bg-opacity,1))}.bg-\[\#0a0a0a\]{--tw-bg-opacity:1;background-color:rgb(10 10 10/var(--tw-bg-opacity,1))}.bg-\[\#0c0c0c\]{--tw-bg-opacity:1;background-color:rgb(12 12 12/var(--tw-bg-opacity,1))}.bg-\[\#0d0d0d\]\/60{background-color:hsla(0,0%,5%,.6)}.bg-\[\#101010\]{--tw-bg-opacity:1;background-color:rgb(16 16 16/var(--tw-bg-opacity,1))}.bg-\[\#1a120a\]{--tw-bg-opacity:1;background-color:rgb(26 18 10/var(--tw-bg-opacity,1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity,1))}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153/var(--tw-bg-opacity,1))}.bg-emerald-400\/60{background-color:rgba(52,211,153,.6)}.bg-emerald-500\/10{background-color:rgba(16,185,129,.1)}.bg-orange-400{--tw-bg-opacity:1;background-color:rgb(251 146 60/var(--tw-bg-opacity,1))}.bg-orange-500\/10{background-color:rgba(249,115,22,.1)}.bg-orange-500\/15{background-color:rgba(249,115,22,.15)}.bg-orange-500\/25{background-color:rgba(249,115,22,.25)}.bg-orange-500\/80{background-color:rgba(249,115,22,.8)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/20{background-color:hsla(0,0%,100%,.2)}.bg-white\/30{background-color:hsla(0,0%,100%,.3)}.bg-white\/\[0\.02\]{background-color:hsla(0,0%,100%,.02)}.bg-white\/\[0\.03\]{background-color:hsla(0,0%,100%,.03)}.bg-white\/\[0\.06\]{background-color:hsla(0,0%,100%,.06)}.bg-yellow-500\/20{background-color:rgba(234,179,8,.2)}.bg-yellow-500\/60{background-color:rgba(234,179,8,.6)}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-l{background-image:linear-gradient(to left,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top,var(--tw-gradient-stops))}.from-orange-500\/15{--tw-gradient-from:rgba(249,115,22,.15) var(--tw-gradient-from-position);--tw-gradient-to:rgba(249,115,22,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-white\/10{--tw-gradient-from:hsla(0,0%,100%,.1) var(--tw-gradient-from-position);--tw-gradient-to:hsla(0,0%,100%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-white\/30{--tw-gradient-from:hsla(0,0%,100%,.3) var(--tw-gradient-from-position);--tw-gradient-to:hsla(0,0%,100%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-white\/\[0\.02\]{--tw-gradient-from:hsla(0,0%,100%,.02) var(--tw-gradient-from-position);--tw-gradient-to:hsla(0,0%,100%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-white\/\[0\.04\]{--tw-gradient-from:hsla(0,0%,100%,.04) var(--tw-gradient-from-position);--tw-gradient-to:hsla(0,0%,100%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-orange-500\/5{--tw-gradient-to:rgba(249,115,22,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(249,115,22,.05) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-white\/\[0\.08\]{--tw-gradient-to:hsla(0,0%,100%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),hsla(0,0%,100%,.08) var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-orange-400\/60{--tw-gradient-to:rgba(251,146,60,.6) var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.to-white\/10{--tw-gradient-to:hsla(0,0%,100%,.1) var(--tw-gradient-to-position)}.to-white\/\[0\.01\]{--tw-gradient-to:hsla(0,0%,100%,.01) var(--tw-gradient-to-position)}.p-3{padding:.75rem}.p-4{padding:1rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-6{padding-top:1.5rem}.pb-6,.py-6{padding-bottom:1.5rem}.pt-6{padding-top:1.5rem}.pt-7{padding-top:1.75rem}.text-right{text-align:right}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[12\.5px\]{font-size:12.5px}.text-\[12px\]{font-size:12px}.text-\[13\.5px\]{font-size:13.5px}.text-\[13px\]{font-size:13px}.text-\[22px\]{font-size:22px}.text-\[28px\]{font-size:28px}.text-\[9px\]{font-size:9px}.font-\[450\]{font-weight:450}.font-\[600\]{font-weight:600}.font-medium{font-weight:500}.leading-6{line-height:1.5rem}.leading-\[1\.2\]{line-height:1.2}.leading-\[1\.5\]{line-height:1.5}.leading-none{line-height:1}.tracking-\[-0\.02em\]{letter-spacing:-.02em}.tracking-\[0\.08em\]{letter-spacing:.08em}.tracking-\[0\.12em\]{letter-spacing:.12em}.tracking-\[0\.14em\]{letter-spacing:.14em}.tracking-\[0\.16em\]{letter-spacing:.16em}.tracking-\[0\.18em\]{letter-spacing:.18em}.tracking-\[0\.1em\]{letter-spacing:.1em}.tracking-\[0\.2em\]{letter-spacing:.2em}.tracking-wide{letter-spacing:.025em}.tracking-widest{letter-spacing:.1em}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-orange-300{--tw-text-opacity:1;color:rgb(253 186 116/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.text-white\/15{color:hsla(0,0%,100%,.15)}.text-white\/20{color:hsla(0,0%,100%,.2)}.text-white\/25{color:hsla(0,0%,100%,.25)}.text-white\/30{color:hsla(0,0%,100%,.3)}.text-white\/35{color:hsla(0,0%,100%,.35)}.text-white\/40{color:hsla(0,0%,100%,.4)}.text-white\/50{color:hsla(0,0%,100%,.5)}.text-white\/60{color:hsla(0,0%,100%,.6)}.text-white\/70{color:hsla(0,0%,100%,.7)}.text-white\/80{color:hsla(0,0%,100%,.8)}.text-white\/85{color:hsla(0,0%,100%,.85)}.text-white\/90{color:hsla(0,0%,100%,.9)}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-40{opacity:.4}.opacity-\[0\.03\]{opacity:.03}.opacity-\[0\.04\]{opacity:.04}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_0_1px_rgba\(255\2c 255\2c 255\2c 0\.04\)_inset\2c 0_20px_80px_rgba\(0\2c 0\2c 0\2c 0\.8\)\]{--tw-shadow:0 0 0 1px hsla(0,0%,100%,.04) inset,0 20px 80px rgba(0,0,0,.8);--tw-shadow-colored:inset 0 0 0 1px var(--tw-shadow-color),0 20px 80px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_10px_rgba\(255\2c 255\2c 255\2c 0\.8\)\]{--tw-shadow:0 0 10px hsla(0,0%,100%,.8);--tw-shadow-colored:0 0 10px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_6px_rgba\(52\2c 211\2c 153\2c 0\.6\)\]{--tw-shadow:0 0 6px rgba(52,211,153,.6);--tw-shadow-colored:0 0 6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_8px_rgba\(251\2c 146\2c 60\2c 0\.8\)\]{--tw-shadow:0 0 8px rgba(251,146,60,.8);--tw-shadow-colored:0 0 8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.blur-\[12px\]{--tw-blur:blur(12px)}.blur-\[12px\],.blur-\[20px\]{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia)}.blur-\[20px\]{--tw-blur:blur(20px)}.blur-\[40px\]{--tw-blur:blur(40px)}.blur-\[40px\],.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}#root,body,html{min-height:100%}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}[role=button]:not([aria-disabled=true]),button:not(:disabled),label[for],select:not(:disabled),summary{cursor:pointer}.selection\:bg-orange-500\/30 ::-moz-selection{background-color:rgba(249,115,22,.3)}.selection\:bg-orange-500\/30 ::selection{background-color:rgba(249,115,22,.3)}.selection\:bg-orange-500\/30::-moz-selection{background-color:rgba(249,115,22,.3)}.selection\:bg-orange-500\/30::selection{background-color:rgba(249,115,22,.3)}@media (min-width:640px){.sm\:col-span-5{grid-column:span 5/span 5}.sm\:col-span-7{grid-column:span 7/span 7}.sm\:block{display:block}.sm\:inline{display:inline}.sm\:h-\[96px\]{height:96px}.sm\:w-auto{width:auto}.sm\:max-w-none{max-width:none}.sm\:justify-end{justify-content:flex-end}.sm\:gap-5{gap:1.25rem}.sm\:rounded-\[24px\]{border-radius:24px}.sm\:border-l{border-left-width:1px}.sm\:border-t-0{border-top-width:0}.sm\:p-5{padding:1.25rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:px-7{padding-left:1.75rem;padding-right:1.75rem}.sm\:py-5{padding-top:1.25rem;padding-bottom:1.25rem}.sm\:py-\[18px\]{padding-top:18px;padding-bottom:18px}.sm\:pt-10{padding-top:2.5rem}.sm\:text-\[30px\]{font-size:30px}}@media (min-width:1024px){.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:inline-flex{display:inline-flex}.lg\:hidden{display:none}.lg\:border-b-0{border-bottom-width:0}.lg\:border-r{border-right-width:1px}.lg\:p-7{padding:1.75rem}}@media (min-width:1280px){.xl\:col-span-5{grid-column:span 5/span 5}.xl\:col-span-7{grid-column:span 7/span 7}}</style>
+</head>
+<body>
+  <div id="root"></div>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client"
+  }
+}
+</script>
+
+  <script type="module">
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+const e = React.createElement;
+
+const DBAI = 78.2;
+const COMPONENTS = [
+  { id: "DBV", value: 12, raw: "30k BTC / 50k cap", label: "Dormant Volume", sub: "Σ dormant ≥5y moved 90d" },
+  { id: "IRI", value: 15.7, raw: "55% institutional", label: "Routing Intensity", sub: "To Prime / Custody / OTC" },
+  { id: "WCI", value: 16, raw: "+0.8% shift", label: "Wealth Concentration", sub: "Δ Top10% - Bottom50% share" },
+  { id: "TDI", value: 18.5, raw: "MMF+4%, HY-40bps", label: "Transmission Distortion", sub: "0.4MMF +0.35HY +0.25VIX" },
+  { id: "MAI", value: 16, raw: "+12% spread", label: "Mispricing Amplification", sub: "Bucket A - Bucket B 30d" }
+];
+const HISTORY = [22, 24, 28, 32, 31, 38, 44, 41, 48, 52, 58, 62, 59, 66, 71, 74, 68, 72, 78.2, 76, 79, 77];
+const REGIME_SEGMENTS = [
+  { from: 0, to: 20, color: "#22c55e" },
+  { from: 20, to: 50, color: "#eab308" },
+  { from: 50, to: 80, color: "#f97316" },
+  { from: 80, to: 100, color: "#ef4444" }
+];
+const GAUGE_LEGEND = [
+  { c: "#22c55e", l: "0-20" },
+  { c: "#eab308", l: "21-50" },
+  { c: "#f97316", l: "51-80" },
+  { c: "#ef4444", l: "81-100" }
+];
+
+const polar = (angleDeg, radius) => {
+  const rad = (angleDeg * Math.PI) / 180;
+  return { x: 160 + radius * Math.cos(rad), y: 160 + radius * Math.sin(rad) };
+};
+const arcPath = (fromDeg, toDeg, radius) => {
+  const a = polar(fromDeg, radius);
+  const b = polar(toDeg, radius);
+  const largeArc = toDeg - fromDeg > 180 ? 1 : 0;
+  return `M ${a.x} ${a.y} A ${radius} ${radius} 0 ${largeArc} 1 ${b.x} ${b.y}`;
+};
+const valueToAngle = (value) => -135 + (value / 100) * 270;
+
+export const DBAIDashboard = () => {
+  const needleAngle = (valueToAngle(DBAI) * Math.PI) / 180;
+  const needleLen = 123;
+  const needleX = 160 + needleLen * Math.cos(needleAngle);
+  const needleY = 160 + needleLen * Math.sin(needleAngle);
+
+  const chartPoints = HISTORY.map((v, i) => {
+    const x = (i / (HISTORY.length - 1)) * 760 + 20;
+    const y = 90 - (v / 100) * 75;
+    return `${x},${y}`;
+  });
+  const chartFill = `M ${chartPoints[0]} L ${chartPoints.join(" L ")} L 780,90 L 20,90 Z`;
+  const chartLine = HISTORY.map((v, i) => {
+    const x = (i / (HISTORY.length - 1)) * 760 + 20;
+    const y = 90 - (v / 100) * 75;
+    return `${i === 0 ? "M" : "L"} ${x} ${y}`;
+  }).join(" ");
+  const markerX = (HISTORY.findIndex((v) => v === DBAI) / (HISTORY.length - 1)) * 760 + 20;
+  const markerY = 90 - (DBAI / 100) * 75;
+
+  return e(
+    "div",
+    { className: "min-h-screen bg-black text-white antialiased selection:bg-orange-500/30" },
+    e(
+      "style",
+      null,
+      `
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+        * { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+      `
+    ),
+    e("div", {
+      className: "fixed inset-0 pointer-events-none opacity-[0.04]",
+      style: {
+        backgroundImage:
+          "linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)",
+        backgroundSize: "40px 40px"
+      }
+    }),
+    e(
+      "div",
+      { className: "relative mx-auto max-w-[1280px] p-3 sm:p-5 lg:p-7" },
+      e(
+        "div",
+        {
+          className:
+            "relative overflow-hidden rounded-[20px] sm:rounded-[24px] border border-white/[0.08] bg-[#0a0a0a] shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset,0_20px_80px_rgba(0,0,0,0.8)]"
+        },
+        e("div", {
+          className:
+            "absolute -top-32 left-1/2 h-[320px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-to-b from-orange-500/15 via-orange-500/5 to-transparent blur-[40px] pointer-events-none"
+        }),
+        e(
+          "div",
+          {
+            className:
+              "relative flex flex-wrap items-center justify-between gap-3 border-b border-white/[0.06] px-5 sm:px-7 py-4 sm:py-[18px]"
+          },
+          e(
+            "div",
+            { className: "flex items-center gap-3 sm:gap-5" },
+            e(
+              "div",
+              { className: "flex items-baseline gap-2.5" },
+              e("span", { className: "text-[11px] tracking-[0.2em] text-white/40 font-medium" }, "DBAI v1.0"),
+              e("span", { className: "h-3 w-px bg-white/10 hidden sm:block" }),
+              e(
+                "span",
+                { className: "mono text-[28px] sm:text-[30px] font-[600] tracking-[-0.02em] leading-none" },
+                DBAI.toFixed(1)
+              ),
+              e("span", { className: "mono text-[11px] text-white/30 mt-1" }, "/ 100")
+            ),
+            e(
+              "div",
+              { className: "flex items-center gap-2" },
+              e(
+                "div",
+                {
+                  className:
+                    "flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-2.5 py-1"
+                },
+                e("span", {
+                  className:
+                    "h-[5px] w-[5px] animate-pulse rounded-full bg-orange-400 shadow-[0_0_8px_rgba(251,146,60,0.8)]"
+                }),
+                e(
+                  "span",
+                  { className: "mono text-[10px] font-[600] tracking-[0.14em] text-orange-300" },
+                  "HIGH"
+                )
+              ),
+              e(
+                "span",
+                { className: "hidden lg:inline-flex mono text-[11px] tracking-[0.08em] text-white/50" },
+                "TRANSMISSION DISTORTION ACTIVE"
+              )
+            )
+          ),
+          e(
+            "div",
+            {
+              className:
+                "flex items-center gap-3 sm:gap-5 w-full sm:w-auto justify-between sm:justify-end"
+            },
+            e(
+              "span",
+              { className: "lg:hidden mono text-[10px] tracking-[0.08em] text-white/40" },
+              "TRANSMISSION DISTORTION ACTIVE"
+            ),
+            e(
+              "div",
+              { className: "flex items-center gap-2.5" },
+              e(
+                "div",
+                {
+                  className:
+                    "flex items-center gap-1.5 rounded-[10px] border border-white/[0.07] bg-white/[0.03] px-2.5 py-1.5"
+                },
+                e("span", {
+                  className:
+                    "h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.6)]"
+                }),
+                e(
+                  "span",
+                  { className: "mono text-[10px] font-medium tracking-widest text-white/60" },
+                  "T+0 LIVE"
+                )
+              ),
+              e("span", { className: "mono text-[11px] text-white/30" }, "2026-05-13 · 16:30 ET")
+            )
+          )
+        ),
+        e(
+          "div",
+          { className: "relative grid grid-cols-12" },
+          e(
+            "div",
+            {
+              className:
+                "col-span-12 lg:col-span-7 xl:col-span-7 border-b lg:border-b-0 lg:border-r border-white/[0.06]"
+            },
+            e(
+              "div",
+              { className: "grid grid-cols-12 h-full" },
+              e(
+                "div",
+                {
+                  className:
+                    "col-span-12 sm:col-span-5 xl:col-span-5 flex flex-col items-center justify-start pt-7 sm:pt-10 pb-6 px-5 sm:px-6"
+                },
+                e(
+                  "div",
+                  { className: "relative" },
+                  e(
+                    "svg",
+                    { width: 320, height: 320, viewBox: "0 0 320 320", className: "block" },
+                    e(
+                      "defs",
+                      null,
+                      e(
+                        "filter",
+                        { id: "glow-orange" },
+                        e("feGaussianBlur", { stdDeviation: "6", result: "coloredBlur" }),
+                        e(
+                          "feMerge",
+                          null,
+                          e("feMergeNode", { in: "coloredBlur" }),
+                          e("feMergeNode", { in: "SourceGraphic" })
+                        )
+                      )
+                    ),
+                    e("path", {
+                      d: arcPath(-135, 135, 141),
+                      fill: "none",
+                      stroke: "rgba(255,255,255,0.06)",
+                      strokeWidth: 14,
+                      strokeLinecap: "round"
+                    }),
+                    REGIME_SEGMENTS.map((s) =>
+                      e("path", {
+                        key: s.from,
+                        d: arcPath(valueToAngle(s.from), valueToAngle(s.to), 141),
+                        fill: "none",
+                        stroke: s.color,
+                        strokeWidth: 14,
+                        strokeLinecap: s.from === 0 || s.to === 100 ? "round" : "butt",
+                        opacity: 0.95
+                      })
+                    ),
+                    [0, 20, 50, 80, 100].map((v) => {
+                      const a = valueToAngle(v);
+                      return e(
+                        "g",
+                        { key: v },
+                        e("line", {
+                          x1: polar(a, 126).x,
+                          y1: polar(a, 126).y,
+                          x2: polar(a, 132).x,
+                          y2: polar(a, 132).y,
+                          stroke: "rgba(255,255,255,0.25)",
+                          strokeWidth: 1
+                        }),
+                        e(
+                          "text",
+                          {
+                            x: polar(a, 105).x,
+                            y: polar(a, 105).y,
+                            textAnchor: "middle",
+                            dominantBaseline: "middle",
+                            className: "mono",
+                            fontSize: "10",
+                            fill: "rgba(255,255,255,0.35)",
+                            fontWeight: "500"
+                          },
+                          String(v)
+                        )
+                      );
+                    }),
+                    e("line", {
+                      x1: 160,
+                      y1: 160,
+                      x2: needleX,
+                      y2: needleY,
+                      stroke: "rgba(0,0,0,0.6)",
+                      strokeWidth: 4,
+                      strokeLinecap: "round",
+                      opacity: 0.6
+                    }),
+                    e("line", {
+                      x1: 160,
+                      y1: 160,
+                      x2: needleX,
+                      y2: needleY,
+                      stroke: "white",
+                      strokeWidth: 2.5,
+                      strokeLinecap: "round"
+                    }),
+                    e("circle", {
+                      cx: 160,
+                      cy: 160,
+                      r: 16,
+                      fill: "#0a0a0a",
+                      stroke: "rgba(255,255,255,0.15)",
+                      strokeWidth: 1
+                    }),
+                    e("circle", { cx: 160, cy: 160, r: 9, fill: "white" }),
+                    e("circle", { cx: 160, cy: 160, r: 3, fill: "black" }),
+                    e(
+                      "g",
+                      null,
+                      e(
+                        "text",
+                        {
+                          x: 160,
+                          y: 214,
+                          textAnchor: "middle",
+                          className: "mono",
+                          fontSize: "36",
+                          fontWeight: "600",
+                          fill: "white",
+                          letterSpacing: "-0.03em"
+                        },
+                        DBAI.toFixed(1)
+                      ),
+                      e(
+                        "text",
+                        {
+                          x: 160,
+                          y: 230,
+                          textAnchor: "middle",
+                          fontSize: "10",
+                          fill: "rgba(255,255,255,0.4)",
+                          letterSpacing: "0.14em",
+                          fontWeight: "500"
+                        },
+                        "DBAI INDEX"
+                      )
+                    )
+                  ),
+                  e("div", {
+                    className:
+                      "pointer-events-none absolute left-1/2 top-[52%] h-[120px] w-[200px] -translate-x-1/2 rounded-full bg-gradient-to-t from-white/[0.02] to-transparent blur-[12px]"
+                  })
+                ),
+                e(
+                  "div",
+                  { className: "mt-1 flex items-center gap-2" },
+                  e("div", { className: "h-px w-6 bg-gradient-to-r from-transparent to-white/10" }),
+                  e(
+                    "span",
+                    { className: "mono text-[10px] tracking-[0.16em] text-white/30" },
+                    "REGIME 0–100"
+                  ),
+                  e("div", { className: "h-px w-6 bg-gradient-to-l from-transparent to-white/10" })
+                ),
+                e(
+                  "div",
+                  { className: "mt-5 flex gap-3" },
+                  GAUGE_LEGEND.map((item) =>
+                    e(
+                      "div",
+                      { key: item.l, className: "flex items-center gap-1.5" },
+                      e("span", {
+                        className: "h-[6px] w-[6px] rounded-full",
+                        style: { background: item.c }
+                      }),
+                      e("span", { className: "mono text-[10px] text-white/35" }, item.l)
+                    )
+                  )
+                )
+              ),
+              e(
+                "div",
+                {
+                  className:
+                    "col-span-12 sm:col-span-7 xl:col-span-7 border-t sm:border-t-0 sm:border-l border-white/[0.06] bg-[#0d0d0d]/60"
+                },
+                e(
+                  "div",
+                  { className: "px-5 sm:px-6 py-5" },
+                  e(
+                    "div",
+                    { className: "flex items-center justify-between mb-5" },
+                    e(
+                      "span",
+                      { className: "text-[11px] tracking-[0.18em] text-white/40 font-medium" },
+                      "COMPONENT BREAKDOWN"
+                    ),
+                    e("span", { className: "mono text-[10px] text-white/25" }, "0 — 20 SCALE")
+                  ),
+                  e(
+                    "div",
+                    { className: "space-y-[18px]" },
+                    COMPONENTS.map((comp) => {
+                      const pct = (comp.value / 20) * 100;
+                      const hot = comp.value >= 15;
+                      return e(
+                        "div",
+                        { key: comp.id, className: "group" },
+                        e(
+                          "div",
+                          { className: "flex items-start justify-between gap-3" },
+                          e(
+                            "div",
+                            { className: "flex items-baseline gap-2" },
+                            e(
+                              "span",
+                              { className: "mono text-[13px] font-[600] tracking-wide text-white" },
+                              comp.id
+                            ),
+                            e(
+                              "span",
+                              { className: "mono text-[13px] font-medium text-white/90" },
+                              comp.value.toFixed(1)
+                            ),
+                            e(
+                              "span",
+                              { className: "mono text-[10px] text-white/35 hidden sm:inline" },
+                              "/20"
+                            )
+                          ),
+                          e(
+                            "span",
+                            {
+                              className:
+                                "mono text-[10px] text-white/35 truncate max-w-[130px] sm:max-w-none text-right"
+                            },
+                            comp.raw
+                          )
+                        ),
+                        e(
+                          "div",
+                          { className: "mt-2 flex items-center gap-2" },
+                          e(
+                            "div",
+                            {
+                              className:
+                                "relative h-[6px] flex-1 overflow-hidden rounded-full bg-white/[0.06]"
+                            },
+                            e("div", {
+                              className: "absolute left-0 top-0 h-full rounded-full transition-all",
+                              style: {
+                                width: `${pct}%`,
+                                background: hot
+                                  ? "linear-gradient(90deg, #f97316, #fb923c)"
+                                  : pct > 60
+                                    ? "linear-gradient(90deg, #eab308, #facc15)"
+                                    : "linear-gradient(90deg, #22c55e, #4ade80)",
+                                boxShadow: hot ? "0 0 12px rgba(249,115,22,0.5)" : undefined
+                              }
+                            }),
+                            e("div", {
+                              className:
+                                "absolute inset-0 rounded-full bg-gradient-to-b from-white/10 to-transparent opacity-40"
+                            })
+                          ),
+                          e(
+                            "span",
+                            {
+                              className: `mono text-[10px] font-medium min-w-[36px] text-right ${
+                                hot ? "text-orange-300" : "text-white/40"
+                              }`
+                            },
+                            `${pct.toFixed(0)}%`
+                          )
+                        ),
+                        e(
+                          "div",
+                          { className: "mt-1.5 flex items-center gap-2" },
+                          e(
+                            "span",
+                            { className: "text-[11px] leading-[1.2] text-white/70" },
+                            comp.label
+                          ),
+                          e(
+                            "span",
+                            { className: "hidden sm:inline text-[10px] text-white/25" },
+                            ["· ", comp.sub]
+                          )
+                        )
+                      );
+                    })
+                  ),
+                  e(
+                    "div",
+                    {
+                      className:
+                        "mt-6 flex items-center gap-2 rounded-[10px] border border-white/[0.06] bg-white/[0.02] px-3 py-2"
+                    },
+                    e("span", { className: "mono text-[10px] text-white/30" }, "FORMULA"),
+                    e(
+                      "span",
+                      { className: "mono text-[11px] text-white/60" },
+                      "DBAI = DBV + IRI + WCI + TDI + MAI = 78.2"
+                    ),
+                    e("span", { className: "ml-auto h-1 w-1 rounded-full bg-emerald-400/60" })
+                  )
+                )
+              )
+            )
+          ),
+          e(
+            "div",
+            { className: "col-span-12 lg:col-span-5 xl:col-span-5 bg-[#101010]" },
+            e(
+              "div",
+              { className: "h-full px-5 sm:px-7 py-6 flex flex-col" },
+              e(
+                "div",
+                { className: "flex items-center justify-between" },
+                e(
+                  "span",
+                  { className: "text-[11px] tracking-[0.18em] text-white/40 font-medium" },
+                  "INTEGRATION → OS"
+                ),
+                e(
+                  "div",
+                  { className: "flex items-center gap-1.5" },
+                  e("span", { className: "h-[4px] w-[4px] rounded-full bg-white/30" }),
+                  e(
+                    "span",
+                    { className: "mono text-[10px] text-white/30" },
+                    "TRANSMISSION MAP"
+                  )
+                )
+              ),
+              e(
+                "div",
+                { className: "mt-6 space-y-4" },
+                e(
+                  "div",
+                  {
+                    className:
+                      "relative overflow-hidden rounded-[14px] border border-white/[0.07] bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-4 backdrop-blur"
+                  },
+                  e("div", {
+                    className:
+                      "absolute -right-10 -top-10 h-24 w-24 rounded-full bg-orange-500/10 blur-[20px]"
+                  }),
+                  e(
+                    "div",
+                    { className: "relative" },
+                    e(
+                      "div",
+                      { className: "flex items-center gap-2 mb-2.5" },
+                      e(
+                        "div",
+                        {
+                          className:
+                            "h-[20px] w-[20px] rounded-[6px] bg-white/[0.06] border border-white/[0.08] flex items-center justify-center"
+                        },
+                        e("div", { className: "h-1.5 w-1.5 rounded-full bg-orange-400" })
+                      ),
+                      e(
+                        "span",
+                        { className: "mono text-[11px] tracking-[0.12em] text-white/50" },
+                        "BIAS"
+                      ),
+                      e(
+                        "span",
+                        {
+                          className:
+                            "ml-auto mono text-[10px] px-1.5 py-0.5 rounded bg-orange-500/15 border border-orange-500/20 text-orange-300"
+                        },
+                        "ACTIVE"
+                      )
+                    ),
+                    e(
+                      "p",
+                      { className: "text-[13.5px] leading-[1.5] text-white/85 font-[450]" },
+                      "Fed reads markets, stays tight; pivot delayed ",
+                      e("span", { className: "mono text-white font-[600]" }, "60–120d")
+                    ),
+                    e(
+                      "p",
+                      {
+                        className:
+                          "mt-2 mono text-[11px] leading-[1.5] text-white/35"
+                      },
+                      "Markets insulated from household pain · MMF chase continues"
+                    )
+                  )
+                ),
+                e(
+                  "div",
+                  {
+                    className:
+                      "relative overflow-hidden rounded-[14px] border border-white/[0.06] bg-white/[0.02] p-4"
+                  },
+                  e(
+                    "div",
+                    { className: "flex items-center gap-2 mb-2.5" },
+                    e(
+                      "div",
+                      {
+                        className:
+                          "h-[20px] w-[20px] rounded-[6px] bg-white/[0.06] border border-white/[0.08] flex items-center justify-center"
+                      },
+                      e(
+                        "svg",
+                        { width: "10", height: "10", viewBox: "0 0 10 10", fill: "none" },
+                        e("path", {
+                          d: "M1 5h8M5 1v8",
+                          stroke: "rgba(255,255,255,0.4)",
+                          strokeWidth: "1.2"
+                        })
+                      )
+                    ),
+                    e(
+                      "span",
+                      { className: "mono text-[11px] tracking-[0.12em] text-white/50" },
+                      "ROTATION WINDOW"
+                    )
+                  ),
+                  e(
+                    "div",
+                    { className: "flex items-baseline gap-2" },
+                    e(
+                      "span",
+                      {
+                        className:
+                          "mono text-[22px] font-[600] tracking-[-0.02em] text-white"
+                      },
+                      "45–120d"
+                    ),
+                    e(
+                      "span",
+                      {
+                        className:
+                          "rounded-full bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 mono text-[10px] font-[600] tracking-wide text-emerald-300"
+                      },
+                      "ENLARGING"
+                    )
+                  ),
+                  e(
+                    "p",
+                    { className: "mt-2 text-[12.5px] leading-[1.5] text-white/60" },
+                    "Pre-position ",
+                    e(
+                      "span",
+                      { className: "text-white/90 font-medium" },
+                      "Bucket B convexity"
+                    ),
+                    " — real economy tails mispriced"
+                  ),
+                  e(
+                    "div",
+                    { className: "mt-4" },
+                    e(
+                      "div",
+                      { className: "flex justify-between mono text-[9px] text-white/25 mb-1.5" },
+                      e("span", null, "NOW"),
+                      e("span", null, "+60d"),
+                      e("span", null, "+120d")
+                    ),
+                    e(
+                      "div",
+                      {
+                        className:
+                          "relative h-[4px] rounded-full bg-white/[0.06] overflow-hidden"
+                      },
+                      e("div", {
+                        className:
+                          "absolute inset-y-0 left-0 w-[72%] rounded-full bg-gradient-to-r from-white/30 to-orange-400/60"
+                      }),
+                      e("div", {
+                        className:
+                          "absolute top-1/2 left-[58%] h-2 w-2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+                      })
+                    )
+                  )
+                ),
+                e(
+                  "div",
+                  {
+                    className: "rounded-[14px] border border-white/[0.06] bg-[#0a0a0a] p-4"
+                  },
+                  e(
+                    "div",
+                    { className: "flex items-center gap-2 mb-3" },
+                    e(
+                      "span",
+                      { className: "mono text-[11px] tracking-[0.12em] text-white/50" },
+                      "ACTION"
+                    ),
+                    e(
+                      "div",
+                      { className: "ml-auto flex items-center gap-1" },
+                      e("span", { className: "h-1 w-1 rounded-full bg-white/20" }),
+                      e("span", { className: "h-1 w-1 rounded-full bg-white/20" }),
+                      e("span", { className: "h-1 w-1 rounded-full bg-orange-400" })
+                    )
+                  ),
+                  e(
+                    "div",
+                    { className: "space-y-2.5" },
+                    e(
+                      "div",
+                      { className: "flex gap-2.5" },
+                      e(
+                        "span",
+                        { className: "mono text-[11px] leading-6 text-white/30 mt-0.5" },
+                        "01"
+                      ),
+                      e(
+                        "p",
+                        { className: "text-[12.5px] leading-[1.5] text-white/80" },
+                        e("span", { className: "text-white font-medium" }, "Long A / Short B"),
+                        " mispricing wide"
+                      )
+                    ),
+                    e(
+                      "div",
+                      { className: "flex gap-2.5" },
+                      e(
+                        "span",
+                        { className: "mono text-[11px] leading-6 text-white/30 mt-0.5" },
+                        "02"
+                      ),
+                      e(
+                        "p",
+                        { className: "text-[12.5px] leading-[1.5] text-white/80" },
+                        "Accumulate ",
+                        e("span", { className: "text-white font-medium" }, "B tails"),
+                        " — small-cap value / commodities vol"
+                      )
+                    ),
+                    e(
+                      "div",
+                      { className: "flex gap-2.5" },
+                      e(
+                        "span",
+                        { className: "mono text-[11px] leading-6 text-white/30 mt-0.5" },
+                        "03"
+                      ),
+                      e(
+                        "p",
+                        { className: "text-[12.5px] leading-[1.5] text-white/50" },
+                        "Short duration, long vol overlay"
+                      )
+                    )
+                  ),
+                  e(
+                    "div",
+                    { className: "mt-4 grid grid-cols-2 gap-2" },
+                    e(
+                      "div",
+                      {
+                        className:
+                          "rounded-[10px] border border-white/[0.06] bg-white/[0.03] px-3 py-2.5"
+                      },
+                      e(
+                        "span",
+                        { className: "mono text-[9px] tracking-[0.12em] text-white/30 block" },
+                        "BUCKET A"
+                      ),
+                      e(
+                        "span",
+                        { className: "mono text-[12px] font-[600] text-emerald-300" },
+                        "+12% 30d"
+                      )
+                    ),
+                    e(
+                      "div",
+                      {
+                        className:
+                          "rounded-[10px] border border-white/[0.06] bg-white/[0.03] px-3 py-2.5"
+                      },
+                      e(
+                        "span",
+                        { className: "mono text-[9px] tracking-[0.12em] text-white/30 block" },
+                        "BUCKET B"
+                      ),
+                      e(
+                        "span",
+                        { className: "mono text-[12px] font-[600] text-white/60" },
+                        "-3.2% lag"
+                      )
+                    )
+                  )
+                )
+              ),
+              e(
+                "div",
+                { className: "mt-auto pt-6 flex items-center gap-2 mono text-[10px] text-white/20" },
+                e("span", null, "OS INTEGRATION READY"),
+                e("span", { className: "h-px flex-1 bg-white/[0.06]" }),
+                e("span", null, "T+0 EDGE")
+              )
+            )
+          )
+        ),
+        e(
+          "div",
+          {
+            className:
+              "relative border-t border-white/[0.06] bg-[#080808] px-5 sm:px-7 py-4 sm:py-5"
+          },
+          e(
+            "div",
+            { className: "flex flex-wrap items-center justify-between gap-3 mb-4" },
+            e(
+              "div",
+              { className: "flex items-center gap-4" },
+              e(
+                "span",
+                { className: "text-[11px] tracking-[0.18em] text-white/40 font-medium" },
+                "HISTORY · 22D"
+              ),
+              e(
+                "div",
+                { className: "flex items-center gap-3" },
+                e(
+                  "div",
+                  { className: "flex items-center gap-1.5" },
+                  e("span", { className: "h-px w-4 bg-yellow-500/60" }),
+                  e(
+                    "span",
+                    { className: "mono text-[10px] text-white/30" },
+                    "30 MODERATE"
+                  )
+                ),
+                e(
+                  "div",
+                  { className: "flex items-center gap-1.5" },
+                  e("span", { className: "h-px w-4 bg-orange-500/80" }),
+                  e("span", { className: "mono text-[10px] text-white/30" }, "60 HIGH")
+                )
+              )
+            ),
+            e(
+              "div",
+              { className: "flex items-center gap-2 mono text-[10px] text-white/25" },
+              e("span", null, "GLASSNODE + FED + INTERNAL"),
+              e("span", { className: "h-3 w-px bg-white/10" }),
+              e("span", null, "DAILY 16:30 ET")
+            )
+          ),
+          e(
+            "div",
+            {
+              className:
+                "relative h-[84px] sm:h-[96px] w-full overflow-hidden rounded-[12px] border border-white/[0.05] bg-[#0c0c0c]"
+            },
+            e(
+              "div",
+              { className: "absolute inset-0" },
+              e("div", {
+                className:
+                  "absolute left-0 right-0 top-[70%] h-px bg-yellow-500/20 border-t border-dashed border-yellow-500/20",
+                style: { borderStyle: "dashed" }
+              }),
+              e("div", {
+                className:
+                  "absolute left-0 right-0 top-[40%] h-px bg-orange-500/25 border-t border-dashed border-orange-500/30",
+                style: { borderStyle: "dashed" }
+              }),
+              e(
+                "div",
+                {
+                  className:
+                    "absolute left-0 right-0 top-0 bottom-0 flex justify-between px-2 opacity-[0.03]"
+                },
+                Array.from({ length: 22 }).map((_, i) =>
+                  e("div", { key: i, className: "w-px h-full bg-white" })
+                )
+              )
+            ),
+            e(
+              "svg",
+              {
+                className: "absolute inset-0 h-full w-full",
+                viewBox: "0 0 800 100",
+                preserveAspectRatio: "none"
+              },
+              e(
+                "defs",
+                null,
+                e(
+                  "linearGradient",
+                  { id: "lineGrad", x1: "0", x2: "1" },
+                  e("stop", { offset: "0%", stopColor: "#22c55e" }),
+                  e("stop", { offset: "40%", stopColor: "#eab308" }),
+                  e("stop", { offset: "75%", stopColor: "#f97316" }),
+                  e("stop", { offset: "100%", stopColor: "#f97316" })
+                ),
+                e(
+                  "linearGradient",
+                  { id: "fillGrad", x1: "0", x2: "0", y1: "0", y2: "1" },
+                  e("stop", { offset: "0%", stopColor: "#f97316", stopOpacity: "0.25" }),
+                  e("stop", { offset: "100%", stopColor: "#f97316", stopOpacity: "0" })
+                )
+              ),
+              e("path", { d: chartFill, fill: "url(#fillGrad)" }),
+              e("path", {
+                d: chartLine,
+                fill: "none",
+                stroke: "url(#lineGrad)",
+                strokeWidth: "2",
+                strokeLinecap: "round",
+                strokeLinejoin: "round"
+              }),
+              e(
+                "g",
+                null,
+                e("circle", { cx: markerX, cy: markerY, r: 10, fill: "#f97316", opacity: 0.15 }),
+                e("circle", { cx: markerX, cy: markerY, r: 4, fill: "#f97316" }),
+                e("circle", { cx: markerX, cy: markerY, r: 2, fill: "white" })
+              )
+            ),
+            e(
+              "div",
+              {
+                className:
+                  "absolute left-2 top-2 bottom-2 flex flex-col justify-between mono text-[9px] text-white/20 pointer-events-none"
+              },
+              e("span", null, "100"),
+              e("span", null, "60"),
+              e("span", null, "30"),
+              e("span", null, "0")
+            ),
+            e(
+              "div",
+              {
+                className:
+                  "absolute right-3 top-3 flex items-center gap-1.5 rounded-full border border-orange-500/20 bg-[#1a120a] px-2.5 py-1"
+              },
+              e(
+                "span",
+                { className: "mono text-[10px] font-[600] text-orange-300" },
+                "78.2 NOW"
+              )
+            )
+          ),
+          e(
+            "div",
+            { className: "mt-3 flex flex-wrap gap-x-6 gap-y-1 mono text-[10px] text-white/25" },
+            e(
+              "span",
+              null,
+              "DBV: 12.0 · IRI: 15.7 · WCI: 16.0 · TDI: 18.5 · MAI: 16.0"
+            ),
+            e("span", { className: "hidden sm:inline h-3 w-px bg-white/10 self-center" }),
+            e(
+              "span",
+              { className: "text-white/35" },
+              "CAPPED AT 100 · REFRESH DAILY EOD · PROVENANCE: TX HASH + FRED TIMESTAMP"
+            )
+          )
+        ),
+        e("div", {
+          className:
+            "h-px w-full bg-gradient-to-r from-transparent via-white/[0.08] to-transparent"
+        })
+      ),
+      e(
+        "div",
+        { className: "mt-4 flex justify-center" },
+        e(
+          "span",
+          { className: "mono text-[10px] tracking-[0.1em] text-white/15" },
+          "DBAI v1.0 · GLASSNODE · CHAINALYSIS · FRED · INTERNAL · BLACK TILE"
+        )
+      )
+    )
+  );
+};
+
+if (typeof document !== "undefined" && document.getElementById("root")) {
+  createRoot(document.getElementById("root")).render(
+    React.createElement(React.StrictMode, null, React.createElement(DBAIDashboard))
+  );
+}
+
+  </script>
+</body>
+</html>

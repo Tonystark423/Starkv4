@@ -27,6 +27,8 @@ src/
   TreeView.jsx         # Interactive packet file-tree explorer
   data.js              # Packet tree + manifest.json content
   index.css           # Tailwind utility classes + fonts
+artifacts/
+  dbai-dashboard.html # Standalone DBAI v1.0 dashboard (single file, React via CDN)
 ```
 
 ## What it renders
